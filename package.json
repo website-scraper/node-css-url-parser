@@ -1,0 +1,36 @@
+{
+  "name": "css-url-parser",
+  "version": "0.1.0",
+  "description": "Parses urls from css file",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "keywords": [
+    "parser",
+    "css",
+    "url"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/s0ph1e/node-css-url-parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/s0ph1e/node-css-url-parser/issues"
+  },
+  "homepage": "https://github.com/s0ph1e/node-css-url-parser",
+  "author": "s0ph1e",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^3.7.0"
+  },
+  "devDependencies": {
+    "should": "^6.0.1",
+    "mocha": "^2.2.4",
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.7"
+  }
+}
