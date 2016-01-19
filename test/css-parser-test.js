@@ -52,4 +52,11 @@ var should = require('should')
 			var urls = parseCssUrls(text);
 			urls.should.be.empty;
 		});
+
+		it('should ignore empty urls', function(){
+			var text = 'div.image { background-image: url(""); } ';
+
+			var urls = parseCssUrls(text);
+			urls.should.be.empty;
+		});
 	});
