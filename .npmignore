@@ -1,0 +1,6 @@
+node_modules
+npm-debug.log
+coverage
+test
+.travis.yml
+license
