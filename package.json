@@ -1,6 +1,6 @@
 {
   "name": "css-url-parser",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Parses urls from css file",
   "readmeFilename": "README.md",
   "main": "index.js",
