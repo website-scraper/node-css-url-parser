@@ -13,7 +13,7 @@ Parse urls from css file
 
 ## Usage
 ```javascript
-var parseCssUrls = require('css-url-parser'); 
+var parseCssUrls = require('css-url-parser');
 
 var css = '@import "a.css"; .image { background-image: url(images/img.png); }';
 var cssUrls = parseCssUrls(css);
@@ -21,3 +21,5 @@ var cssUrls = parseCssUrls(css);
 console.log(cssUrls);   // [ 'a.css', 'images/img.png' ]
 ```
 
+It ignores duplicated urls and base64 encoded resources.
+If no urls found empty array will be returned.

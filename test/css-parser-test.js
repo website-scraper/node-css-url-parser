@@ -50,6 +50,7 @@ var should = require('should')
 			';
 
 			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array);
 			urls.should.be.empty;
 		});
 
@@ -57,6 +58,15 @@ var should = require('should')
 			var text = 'div.image { background-image: url(""); } ';
 
 			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array);
+			urls.should.be.empty;
+		});
+
+		it('should return empty array if no urls were found', function(){
+			var text = 'no css urls should be found in this text';
+
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array);
 			urls.should.be.empty;
 		});
 	});
