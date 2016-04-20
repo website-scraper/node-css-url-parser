@@ -5,6 +5,7 @@ Parse urls from css file
 [![Coverage Status](https://coveralls.io/repos/s0ph1e/node-css-url-parser/badge.svg)](https://coveralls.io/r/s0ph1e/node-css-url-parser)
 [![Code Climate](https://codeclimate.com/github/s0ph1e/node-css-url-parser/badges/gpa.svg)](https://codeclimate.com/github/s0ph1e/node-css-url-parser)
 [![Version](https://img.shields.io/npm/v/css-url-parser.svg?style=flat)](https://www.npmjs.org/package/css-url-parser)
+[![Downloads](https://img.shields.io/npm/dm/css-url-parser.svg?style=flat)](https://www.npmjs.org/package/css-url-parser)
 [![Dependency Status](https://david-dm.org/s0ph1e/node-css-url-parser.svg?style=flat)](https://david-dm.org/s0ph1e/node-css-url-parser)
 
 
