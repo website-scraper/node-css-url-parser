@@ -59,12 +59,12 @@ describe('Parse css urls', function(){
 	});
 
 	describe('comments', function() {
-		it('should ignore comments and return empty array if there are only comments in text', function(){
+		it('should ignore multi-line comments', function(){
 			var text = '\
-				/* @import url("a.css");                         \
-				 @import url("b.css");                           \
-				 .image { background-image: url("bg.png"); } */  \
-				 \
+				/* @import url("a.css");                     \n\
+				 @import url("b.css");                       \n\
+				 .image { background-image: url("bg.png"); } \n\
+				 */  \
 			';
 
 			var urls = parseCssUrls(text);
@@ -72,10 +72,29 @@ describe('Parse css urls', function(){
 			urls.should.have.length(0);
 		});
 
-		it('should ignore comments and return only urls from rules', function(){
+		it('should ignore single-line comments in the middle of the text', function(){
 			var text = '\
-				/* @import url("a.css"); */            \
-				@import url("b.css");                  \
+				// @import url("a.css"); \n\
+			';
+
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array);
+			urls.should.have.length(0);
+		});
+
+		it('should ignore single-line comments in the end of the text', function(){
+			var text = '// @import url("a.css");';
+
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array);
+			urls.should.have.length(0);
+		});
+
+		it('should ignore all comments and return only urls from rules', function(){
+			var text = '\
+				/* @import url("a.css"); */           \n\
+				@import url("b.css");                 \n\
+				//.image { background-image: url("bg.png"); }\n \
 			';
 
 			var urls = parseCssUrls(text);
@@ -86,8 +105,8 @@ describe('Parse css urls', function(){
 
 		it('should ignore comments because they may be tricky', function(){
 			var text = '\
-				/* @import hahahaha  */\
-				@import url("a.css");  \
+				/* @import hahahaha  */ \n\
+				@import url("a.css");   \n\
 			';
 
 			var urls = parseCssUrls(text);
