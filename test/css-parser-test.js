@@ -69,4 +69,43 @@ describe('Parse css urls', function(){
 		urls.should.be.instanceof(Array);
 		urls.should.have.length(0);
 	});
+
+	describe('comments', function() {
+		it('should ignore comments and return empty array if there are only comments in text', function(){
+			var text = '\
+				/* @import url("a.css");                         \
+				 @import url("b.css");                           \
+				 .image { background-image: url("bg.png"); } */  \
+				 \
+			';
+
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array);
+			urls.should.have.length(0);
+		});
+
+		it('should ignore comments and return only urls from rules', function(){
+			var text = '\
+				/* @import url("a.css"); */            \
+				@import url("b.css");                  \
+			';
+
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array);
+			urls.should.have.length(1);
+			urls.should.containEql('b.css');
+		});
+
+		it('should ignore comments because they may be tricky', function(){
+			var text = '\
+				/* @import hahahaha  */\
+				@import url("a.css");  \
+			';
+
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array);
+			urls.should.have.length(1);
+			urls.should.containEql('a.css');
+		});
+	});
 });
