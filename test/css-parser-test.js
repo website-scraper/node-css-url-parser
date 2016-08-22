@@ -126,5 +126,19 @@ describe('Parse css urls', function(){
 			urls.should.be.instanceof(Array);
 			urls.should.have.length(0);
 		});
+
+		it('should exclude urls in comment blocks', function(){
+			var text = '\
+				@import url("a.css");                \
+				@import a.css;                       \
+				/* some comment						 \
+				.image { background: url("a.css"); } \
+				.image { background: url("a.css"); } \
+				*/									 \
+			';
+
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array).and.have.lengthOf(1);
+		});
 	});
 });

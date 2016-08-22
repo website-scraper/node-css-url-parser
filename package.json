@@ -26,7 +26,7 @@
   "author": "s0ph1e",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.0.0"
+
   },
   "devDependencies": {
     "coveralls": "^2.11.2",
