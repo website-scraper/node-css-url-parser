@@ -69,4 +69,18 @@ var should = require('should')
 			urls.should.be.instanceof(Array);
 			urls.should.be.empty;
 		});
+
+		it('should exclude urls in comment blocks', function(){
+			var text = '\
+				@import url("a.css");                \
+				@import a.css;                       \
+				/* some comment						 \
+				.image { background: url("a.css"); } \
+				.image { background: url("a.css"); } \
+				*/									 \
+			';
+
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array).and.have.lengthOf(01);
+		});
 	});
