@@ -81,6 +81,6 @@ var should = require('should')
 			';
 
 			var urls = parseCssUrls(text);
-			urls.should.be.instanceof(Array).and.have.lengthOf(01);
+			urls.should.be.instanceof(Array).and.have.lengthOf(1);
 		});
 	});
