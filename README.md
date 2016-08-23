@@ -10,7 +10,9 @@ Parse urls from css file
 
 
 ## Installation
-`npm install css-url-parser`
+```
+npm install css-url-parser
+```
 
 ## Usage
 ```javascript
