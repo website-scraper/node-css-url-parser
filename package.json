@@ -1,12 +1,9 @@
 {
   "name": "css-url-parser",
-  "version": "1.0.0",
-  "description": "Parses urls from css file",
+  "version": "1.1.0",
+  "description": "Parse urls from css",
   "readmeFilename": "README.md",
   "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
