@@ -7,6 +7,7 @@ Parse urls from css file
 [![Version](https://img.shields.io/npm/v/css-url-parser.svg?style=flat)](https://www.npmjs.org/package/css-url-parser)
 [![Downloads](https://img.shields.io/npm/dm/css-url-parser.svg?style=flat)](https://www.npmjs.org/package/css-url-parser)
 [![Dependency Status](https://david-dm.org/s0ph1e/node-css-url-parser.svg?style=flat)](https://david-dm.org/s0ph1e/node-css-url-parser)
+[![Gitter](https://badges.gitter.im/s0ph1e/node-css-url-parser.svg)](https://gitter.im/s0ph1e/node-css-url-parser?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 
 ## Installation
