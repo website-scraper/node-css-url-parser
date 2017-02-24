@@ -58,6 +58,30 @@ describe('Parse css urls', function(){
 		urls.should.have.length(0);
 	});
 
+	it('should handle urls with spaces inside brackets', function () {
+		var text1 = '.image { background: url( "1.css"); } ';
+		var urls1 = parseCssUrls(text1);
+		urls1.should.be.instanceof(Array).and.have.lengthOf(1);
+		urls1.should.containEql('1.css');
+
+		var text2 = '.image { background: url(		"2.css"); } ';
+		var urls2 = parseCssUrls(text2);
+		urls2.should.be.instanceof(Array).and.have.lengthOf(1);
+		urls2.should.containEql('2.css');
+
+		var text3 = ".image { background: url('3.css'    ); } ";
+		var urls3 = parseCssUrls(text3);
+		urls3.should.be.instanceof(Array).and.have.lengthOf(1);
+		urls3.should.containEql('3.css');
+	});
+
+	it('should handle urls with spaces inside quotes', function() {
+		var text = '.image { background: url(" a.css"); } ';
+		var urls = parseCssUrls(text);
+		urls.should.be.instanceof(Array).and.have.lengthOf(1);
+		urls.should.containEql(' a.css');
+	});
+
 	describe('comments', function() {
 		it('should ignore comments and return empty array if there are only comments in text', function(){
 			var text = '\
