@@ -121,7 +121,7 @@ describe('Parse css urls', function(){
 		});
 	});
 
-	describe('base64 dataURI', function() {
+	describe('Data URI', function() {
 		it('should ignore base64 encoded images', function(){
 			var text = '\
 				div.image { \
@@ -150,5 +150,23 @@ describe('Parse css urls', function(){
 			urls.should.be.instanceof(Array);
 			urls.should.have.length(0);
 		});
+
+		it('should ignore utf-8 encoded data uri', function() {
+			var text = 'img.grayscale { \
+				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'></svg>"); \
+			}';
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array);
+			urls.should.have.length(0);
+		});
+
+		it('should ignore minimal data uri ("data:,")', function() {
+			var text = 'img.grayscale { \
+				filter: url("data:,"); \
+			}';
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array);
+			urls.should.have.length(0);
+		})
 	});
 });
