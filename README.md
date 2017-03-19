@@ -1,4 +1,6 @@
 ## Introduction
+
+[![Join the chat at https://gitter.im/s0ph1e/node-css-url-parser](https://badges.gitter.im/s0ph1e/node-css-url-parser.svg)](https://gitter.im/s0ph1e/node-css-url-parser?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 Parse urls from css file
 
 [![Build Status](https://img.shields.io/travis/s0ph1e/node-css-url-parser/master.svg?style=flat)](https://travis-ci.org/s0ph1e/node-css-url-parser)
