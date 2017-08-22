@@ -1,13 +1,13 @@
 ## Introduction
 Parse urls from css file
 
-[![Build Status](https://img.shields.io/travis/s0ph1e/node-css-url-parser/master.svg?style=flat)](https://travis-ci.org/s0ph1e/node-css-url-parser)
-[![Coverage Status](https://coveralls.io/repos/s0ph1e/node-css-url-parser/badge.svg)](https://coveralls.io/r/s0ph1e/node-css-url-parser)
-[![Code Climate](https://codeclimate.com/github/s0ph1e/node-css-url-parser/badges/gpa.svg)](https://codeclimate.com/github/s0ph1e/node-css-url-parser)
+[![Build Status](https://img.shields.io/travis/website-scraper/node-css-url-parser/master.svg?style=flat)](https://travis-ci.org/website-scraper/node-css-url-parser)
+[![Coverage Status](https://coveralls.io/repos/website-scraper/node-css-url-parser/badge.svg)](https://coveralls.io/r/website-scraper/node-css-url-parser)
+[![Code Climate](https://codeclimate.com/github/website-scraper/node-css-url-parser/badges/gpa.svg)](https://codeclimate.com/github/website-scraper/node-css-url-parser)
 [![Version](https://img.shields.io/npm/v/css-url-parser.svg?style=flat)](https://www.npmjs.org/package/css-url-parser)
 [![Downloads](https://img.shields.io/npm/dm/css-url-parser.svg?style=flat)](https://www.npmjs.org/package/css-url-parser)
-[![Dependency Status](https://david-dm.org/s0ph1e/node-css-url-parser.svg?style=flat)](https://david-dm.org/s0ph1e/node-css-url-parser)
-[![Gitter](https://badges.gitter.im/s0ph1e/node-css-url-parser.svg)](https://gitter.im/s0ph1e/node-css-url-parser?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Dependency Status](https://david-dm.org/website-scraper/node-css-url-parser.svg?style=flat)](https://david-dm.org/website-scraper/node-css-url-parser)
+[![Gitter](https://badges.gitter.im/website-scraper/node-css-url-parser.svg)](https://gitter.im/website-scraper/node-css-url-parser?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 
 ## Installation

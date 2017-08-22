@@ -14,13 +14,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/s0ph1e/node-css-url-parser.git"
+    "url": "git://github.com/website-scraper/node-css-url-parser.git"
   },
   "bugs": {
-    "url": "https://github.com/s0ph1e/node-css-url-parser/issues"
+    "url": "https://github.com/website-scraper/node-css-url-parser/issues"
   },
-  "homepage": "https://github.com/s0ph1e/node-css-url-parser",
-  "author": "s0ph1e",
+  "homepage": "https://github.com/website-scraper/node-css-url-parser",
+  "author": "Sophia Antipenko <sophia@antipenko.pp.ua>",
   "license": "MIT",
   "devDependencies": {
     "coveralls": "^2.11.2",
