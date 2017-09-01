@@ -1,6 +1,4 @@
 ## Introduction
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/website-scraper/node-css-url-parser.svg)](https://greenkeeper.io/)
 Parse urls from css file
 
 [![Build Status](https://img.shields.io/travis/website-scraper/node-css-url-parser/master.svg?style=flat)](https://travis-ci.org/website-scraper/node-css-url-parser)
