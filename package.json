@@ -23,7 +23,7 @@
   "author": "Sophia Antipenko <sophia@antipenko.pp.ua>",
   "license": "MIT",
   "devDependencies": {
-    "coveralls": "^2.11.2",
+    "coveralls": "^3.0.0",
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
     "should": "^13.0.0"
