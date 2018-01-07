@@ -80,6 +80,13 @@ describe('Parse css urls', function(){
 		var urls = parseCssUrls(text);
 		urls.should.be.instanceof(Array).and.have.lengthOf(1);
 		urls.should.containEql(' a.css');
+    });
+    
+    it('should handle urls with parentheses inside quotes', function() {
+		var text = '.image { background: url("a(1).css"); } ';
+		var urls = parseCssUrls(text);
+		urls.should.be.instanceof(Array).and.have.lengthOf(1);
+		urls.should.containEql('a(1).css');
 	});
 
 	describe('comments', function() {
