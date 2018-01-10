@@ -82,6 +82,80 @@ describe('Parse css urls', function(){
 		urls.should.containEql(' a.css');
 	});
 
+	it('should handle urls without extension', function() {
+		var text = '.image { background: url("image-without-ext"); } ';
+		var urls = parseCssUrls(text);
+		urls.should.be.instanceof(Array).and.have.lengthOf(1);
+		urls.should.containEql('image-without-ext');
+	});
+
+	describe('quotes', function() {
+		it('should find url without quotes', function() {
+			var text = '.image { background: url(bg.jpg); } ';
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array).and.have.lengthOf(1);
+			urls.should.containEql('bg.jpg');
+		});
+
+		it('should find url containing single quotes inside double quotes', function() {
+			var text = '.image { background: url("bg\'1.jpg"); }';
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array).and.have.lengthOf(1);
+			urls.should.containEql('bg\'1.jpg');
+		});
+
+		it('should find url containing double quotes inside single quotes', function() {
+			var text = '.image { background: url(\'bg" 23\'); }';
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array).and.have.lengthOf(1);
+			urls.should.containEql('bg" 23');
+		});
+
+		it('should find import without quotes', function() {
+			var text = '@import new.css;';
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array).and.have.lengthOf(1);
+			urls.should.containEql('new.css');
+		});
+
+		it('should find import containing single quotes inside double quotes', function() {
+			var text = '@import "new\'11\'.css";';
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array).and.have.lengthOf(1);
+			urls.should.containEql('new\'11\'.css');
+		});
+
+		it('should find import containing double quotes inside single quotes', function() {
+			var text = '@import \'new" _2_".css\';';
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array).and.have.lengthOf(1);
+			urls.should.containEql('new" _2_".css');
+		});
+	});
+
+	describe('parentheses', function() {
+		it('should handle parentheses inside url in filename', function() {
+			var text = '.image { background: url("test (2).png"); } ';
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array).and.have.lengthOf(1);
+			urls.should.containEql('test (2).png');
+		});
+
+		it('should handle parentheses inside url in extension', function() {
+			var text = '.image { background: url(\'test.png (2)\'); } ';
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array).and.have.lengthOf(1);
+			urls.should.containEql('test.png (2)');
+		});
+
+		it('should handle parentheses inside @import', function() {
+			var text = '@import "import)).css" ';
+			var urls = parseCssUrls(text);
+			urls.should.be.instanceof(Array).and.have.lengthOf(1);
+			urls.should.containEql('import)).css');
+		});
+	});
+
 	describe('comments', function() {
 		it('should ignore comments and return empty array if there are only comments in text', function(){
 			var text = '\
