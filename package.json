@@ -5,7 +5,8 @@
   "readmeFilename": "README.md",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec"
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && npm run eslint",
+    "eslint": "eslint lib/** index.js"
   },
   "keywords": [
     "parser",
@@ -24,8 +25,13 @@
   "license": "MIT",
   "devDependencies": {
     "coveralls": "^3.0.0",
+    "eslint": "^4.15.0",
     "istanbul": "^0.4.5",
     "mocha": "^4.0.0",
     "should": "^13.0.0"
-  }
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
 }
