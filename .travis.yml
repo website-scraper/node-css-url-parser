@@ -5,6 +5,7 @@ node_js:
   - "6"
   - "5"
   - "4"
+  - "10"
 
 after_success:
   - travis_retry coveralls < coverage/lcov.info
