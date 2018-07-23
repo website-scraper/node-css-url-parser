@@ -242,5 +242,14 @@ describe('Parse css urls', function(){
 			urls.should.be.instanceof(Array);
 			urls.should.have.length(0);
 		})
+
+    it('should ignore data uri ("data:image/svg+xml;utf-8")', function() {
+    	var text = 'img.grayscale { \
+    		filter: url("data:image/svg+xml;utf-8"); \
+    	}';
+    	var urls = parseCssUrls(text);
+    	urls.should.be.instanceof(Array);
+    	urls.should.have.length(0);
+    })
 	});
 });
