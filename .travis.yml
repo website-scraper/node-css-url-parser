@@ -7,6 +7,8 @@ node_js:
   - "8"
   - "9"
   - "10"
+  - "11"
+  - "12"
 
 after_success:
   - travis_retry coveralls < coverage/lcov.info
