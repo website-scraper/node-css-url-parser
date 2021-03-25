@@ -1,7 +1,7 @@
 ## Introduction
 Parse urls from css file
 
-[![Build Status](https://img.shields.io/travis/website-scraper/node-css-url-parser/master.svg?style=flat)](https://travis-ci.org/website-scraper/node-css-url-parser)
+[![Build Status](https://img.shields.io/travis/website-scraper/node-css-url-parser/master.svg?style=flat)](https://travis-ci.com/github/website-scraper/node-css-url-parser)
 [![Coverage Status](https://coveralls.io/repos/website-scraper/node-css-url-parser/badge.svg)](https://coveralls.io/r/website-scraper/node-css-url-parser)
 [![Code Climate](https://codeclimate.com/github/website-scraper/node-css-url-parser/badges/gpa.svg)](https://codeclimate.com/github/website-scraper/node-css-url-parser)
 [![Version](https://img.shields.io/npm/v/css-url-parser.svg?style=flat)](https://www.npmjs.org/package/css-url-parser)
