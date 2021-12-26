@@ -31,6 +31,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm i
       - run: npm test
+      - run: npm run eslint
+        if: ${{ matrix.node-version == '16' && matrix.os == 'ubuntu-latest' }}
       - name: Coveralls
         if: ${{ matrix.node-version == '16' && matrix.os == 'ubuntu-latest' }}
         uses: coverallsapp/github-action@master

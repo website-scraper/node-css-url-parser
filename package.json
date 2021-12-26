@@ -5,7 +5,7 @@
   "readmeFilename": "README.md",
   "main": "index.js",
   "scripts": {
-    "test": "c8 --all --reporter=text --reporter=lcov mocha --recursive && npm run eslint",
+    "test": "c8 --all --reporter=text --reporter=lcov mocha --recursive",
     "eslint": "eslint lib/** index.js"
   },
   "keywords": [
