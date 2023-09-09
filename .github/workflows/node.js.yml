@@ -34,14 +34,14 @@ jobs:
       - run: npm i
       - run: npm test
       - run: npm run eslint
-        if: ${{ matrix.node-version == '16' && matrix.os == 'ubuntu-latest' }}
+        if: ${{ matrix.node-version == '20' && matrix.os == 'ubuntu-latest' }}
       - name: Coveralls
-        if: ${{ matrix.node-version == '16' && matrix.os == 'ubuntu-latest' }}
+        if: ${{ matrix.node-version == '20' && matrix.os == 'ubuntu-latest' }}
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish codeclimate code coverage
-        if: ${{ matrix.node-version == '16' && matrix.os == 'ubuntu-latest' }}
+        if: ${{ matrix.node-version == '20' && matrix.os == 'ubuntu-latest' }}
         uses: paambaati/codeclimate-action@v5.0.0
         env:
           CC_TEST_REPORTER_ID: d9841018a6538b102775167be6694d17433a951f694e310fa8807f26fe9e0154
