@@ -5,7 +5,8 @@ Parse urls from css file
 [![Downloads](https://img.shields.io/npm/dm/css-url-parser.svg?style=flat)](https://www.npmjs.org/package/css-url-parser)
 [![Node.js CI](https://github.com/website-scraper/node-css-url-parser/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/website-scraper/node-css-url-parser/)
 [![Coverage Status](https://coveralls.io/repos/website-scraper/node-css-url-parser/badge.svg)](https://coveralls.io/r/website-scraper/node-css-url-parser)
-[![Code Climate](https://codeclimate.com/github/website-scraper/node-css-url-parser/badges/gpa.svg)](https://codeclimate.com/github/website-scraper/node-css-url-parser)
+[![Code Coverage](https://qlty.sh/gh/website-scraper/projects/node-css-url-parser/coverage.svg)](https://qlty.sh/gh/website-scraper/projects/node-css-url-parser)
+[![Maintainability](https://qlty.sh/gh/website-scraper/projects/node-css-url-parser/maintainability.svg)](https://qlty.sh/gh/website-scraper/projects/node-css-url-parser)
 
 ## Installation
 ```
