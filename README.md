@@ -8,6 +8,12 @@ Parse urls from css file
 [![Code Coverage](https://qlty.sh/gh/website-scraper/projects/node-css-url-parser/coverage.svg)](https://qlty.sh/gh/website-scraper/projects/node-css-url-parser)
 [![Maintainability](https://qlty.sh/gh/website-scraper/projects/node-css-url-parser/maintainability.svg)](https://qlty.sh/gh/website-scraper/projects/node-css-url-parser)
 
+## Sponsors
+Maintenance of this project is made possible by all the [contributors](https://github.com/website-scraper/node-css-url-parser/graphs/contributors) and [sponsors](https://github.com/sponsors/s0ph1e).
+If you'd like to sponsor this project and have your avatar or company logo appear below [click here](https://github.com/sponsors/s0ph1e). 💖
+
+<!-- sponsors --><!-- sponsors -->
+
 ## Installation
 ```
 npm install css-url-parser
