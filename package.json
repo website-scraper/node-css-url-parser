@@ -21,7 +21,7 @@
     "url": "https://github.com/website-scraper/node-css-url-parser/issues"
   },
   "homepage": "https://github.com/website-scraper/node-css-url-parser",
-  "author": "Sofiia Antypenko <sophia@antipenko.pp.ua>",
+  "author": "Sofiia Antypenko <sofiia@antypenko.dev>",
   "license": "MIT",
   "devDependencies": {
     "c8": "^10.1.2",
